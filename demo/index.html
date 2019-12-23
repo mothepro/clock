@@ -13,11 +13,17 @@
   <!-- Development -->
   <script dev-only type="application/javascript" src="//unpkg.com/typescript@3.7.4/lib/typescript.js"></script>
   <script dev-only type="module" src="//unpkg.com/@mothepro/ts-module-shim/dist/esm/index.js"></script>
-  <script dev-only type="module-shim" src="index.ts"></script>
+  <script dev-only type="module-shim" src="../index.ts"></script>
 </head>
 
 <body>
+  <h1>Clocks</h1>
 
+  Normal <lit-clock></lit-clock>
+  <br/>
+  Pause on blur <lit-clock pauseOnBlur></lit-clock>
+  <br/>
+  Ticked & Paused <lit-clock pause ticks=100></lit-clock>
 </body>
 
 </html>
