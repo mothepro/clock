@@ -29,22 +29,16 @@
     "html:prod:shim": "replace 'prod-only type=\"' 'prod-only type=\"prod-only-' demo/index.html",
     "predeploy": "npm run html:dev:shim && npm run html:prod:real && npm run build:esm",
     "postdeploy": "npm run html:dev:real && npm run html:prod:shim",
-    "deploy": "gh-pages -d dist/demo -v *.ts",
+    "deploy": "gh-pages -d demo",
     "build:npm": "tsc",
-    "build:esm": "ttsc -p tsconfig.esm.json"
+    "build:esm": "tsc -p tsconfig.esm.json"
   },
   "devDependencies": {
-    "@open-wc/testing": "^2.4.2",
-    "@types/mocha": "^5.2.7",
-    "@types/should-sinon": "^0.0.5",
     "gh-pages": "^2.1.1",
     "importly": "^0.1.0-dev.0",
-    "mocha": "^6.2.2",
     "np": "^5.2.1",
     "replace": "^1.1.1",
     "should": "^13.2.3",
-    "should-sinon": "^0.0.6",
-    "sinon": "^8.0.1",
     "typescript": "^3.7.4"
   },
   "dependencies": {
