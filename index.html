@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Clock Demo</title>
+  <script type="module" src="//unpkg.com/es-module-shims@0.4.6/dist/es-module-shims.min.js"></script>
+  <script type="importmap-shim" src="import-map.json"></script>
+  <!-- Production -->
+  <script prod-only type="module-shim" src="//unpkg.com/lit-confetti/dist/esm/demo/index.js"></script>
+  <!-- Development -->
+  <script dev- only type = "dev-only-application/javascript" src="//unpkg.com/typescript@3.7.4/lib/typescript.js"></script>
+  <script dev- only type = "dev-only-module" src="//unpkg.com/@mothepro/ts-module-shim/dist/esm/index.js"></script>
+  <script dev- only type = "dev-only-module-shim" src="../index.ts"></script>
+</head>
+
+<body>
+  <h1>Clocks</h1>
+
+  Normal <lit-clock></lit-clock>
+  <br/>
+  Pause on blur <lit-clock pauseOnBlur></lit-clock>
+  <br/>
+  Ticked & Paused <lit-clock pause ticks=100></lit-clock>
+</body>
+
+</html>
