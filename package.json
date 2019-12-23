@@ -1,0 +1,53 @@
+{
+  "name": "@mothepro/clock",
+  "description": "Simple clock element",
+  "author": "Maurice Prosper",
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "main": "dist/npm/index.js",
+  "sideEffects": false,
+  "type": "module",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "repository": "https://github.com/mothepro/clock",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "npm run build:npm && npm run build:esm",
+    "pretest": "npm run build:npm",
+    "test": "mocha -r should -r should-sinon dist/npm/test/*.js",
+    "prerelease": "npm run build:npm && npm run deploy",
+    "release": "np",
+    "importmap": "importly --host unpkg < package.json > demo/import-map.prod.json",
+    "win:importmap": "type package.json | importly --host unpkg > demo/import-map.prod.json",
+    "html:dev:real": "replace 'dev-only type=\"dev-only-' 'dev-only type=\"' demo/index.html",
+    "html:dev:shim": "replace 'dev-only type=\"' 'dev- only type = \"dev-only-' demo/index.html",
+    "html:prod:real": "replace 'prod-only type=\"prod-only-' 'prod-only type=\"' demo/index.html",
+    "html:prod:shim": "replace 'prod-only type=\"' 'prod-only type=\"prod-only-' demo/index.html",
+    "predeploy": "npm run html:dev:shim && npm run html:prod:real && npm run build:esm",
+    "postdeploy": "npm run html:dev:real && npm run html:prod:shim",
+    "deploy": "gh-pages -d dist/demo -v *.ts",
+    "build:npm": "tsc",
+    "build:esm": "ttsc -p tsconfig.esm.json"
+  },
+  "devDependencies": {
+    "@open-wc/testing": "^2.4.2",
+    "@types/mocha": "^5.2.7",
+    "@types/should-sinon": "^0.0.5",
+    "gh-pages": "^2.1.1",
+    "importly": "^0.1.0-dev.0",
+    "mocha": "^6.2.2",
+    "np": "^5.2.1",
+    "replace": "^1.1.1",
+    "should": "^13.2.3",
+    "should-sinon": "^0.0.6",
+    "sinon": "^8.0.1",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "lit-element": "^2.2.1"
+  }
+}
