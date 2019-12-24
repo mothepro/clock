@@ -9,7 +9,7 @@ export default class extends LitElement {
   @property({ type: Boolean })
   pause = false
 
-  @property({ type: Boolean })
+  @property({ type: Boolean, attribute: 'pause-on-blur' })
   pauseOnBlur = false
 
   static readonly styles = css`
