@@ -21,17 +21,16 @@
 ```
 <custom-element-demo>
   <template>
+    <script type="module" src="//unpkg.com/@mothepro/lit-clock/dist/esm/index.js"></script>
     <script type="module" src="//unpkg.com/es-module-shims@0.4.6/dist/es-module-shims.min.js"></script>
     <script type="importmap-shim" src="demo/import-map.json"></script>
     <script type="module-shim" src="//unpkg.com/@mothepro/lit-clock/dist/esm/index.js"></script>
  
-    <link rel="import" href="demo/index.html">
     <next-code-block></next-code-block>
   </template>
 </custom-element-demo>
 ```
 -->
-
 ```html
 <script type="module" src="//unpkg.com/@mothepro/lit-clock/dist/esm/index.js"></script>
 
