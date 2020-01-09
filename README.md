@@ -21,9 +21,8 @@
 ```
 <custom-element-demo>
   <template>
-    <script type="module" src="//unpkg.com/@mothepro/lit-clock/dist/esm/index.js"></script>
     <script type="module" src="//unpkg.com/es-module-shims@0.4.6/dist/es-module-shims.min.js"></script>
-    <script type="importmap-shim" src="demo/import-map.json"></script>
+    <script type="importmap-shim" src="https://mothepro.github.io/clock/import-map.json"></script>
     <script type="module-shim" src="//unpkg.com/@mothepro/lit-clock/dist/esm/index.js"></script>
  
     <next-code-block></next-code-block>
@@ -32,7 +31,6 @@
 ```
 -->
 ```html
-<script type="module" src="//unpkg.com/@mothepro/lit-clock/dist/esm/index.js"></script>
-
+Pause on blur clock
 <lit-clock pause-on-blur ticks=0></lit-clock>
 ```
