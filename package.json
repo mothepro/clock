@@ -2,7 +2,7 @@
   "name": "@mothepro/lit-clock",
   "description": "Simple clock element",
   "author": "Maurice Prosper",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "Apache-2.0",
   "main": "dist/npm/index.js",
   "sideEffects": false,
