@@ -3,7 +3,7 @@ import { LitElement, html, property, customElement, css } from 'lit-element'
 @customElement('lit-clock')
 export default class extends LitElement {
 
-  @property({ type: Number })
+  @property({ type: Number, reflect: true })
   ticks = 0
 
   @property({ type: Boolean })
